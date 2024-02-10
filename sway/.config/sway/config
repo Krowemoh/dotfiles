@@ -25,7 +25,7 @@ set $menu tofi-run | xargs swaymsg exec --
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg ~/Downloads/skies-29JUL2022.jpg fill
+output * bg ~/.config/wallpapers/skies-29JUL2022.jpg fill
 #
 # Example configuration:
 #

@@ -196,7 +196,7 @@ gaps inner 20
 
 focus_follows_mouse no
 
-exec --no-startup-id feh --bg-fill ~/Downloads/skies-29JUL2022.jpg
+exec --no-startup-id feh --bg-fill ~/.config/wallpapers/skies-29JUL2022.jpg
 exec --no-startup-id ~/.screenlayout/3monitors.sh
 
 for_window [class="xfreerdp"] floating enable
