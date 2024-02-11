@@ -31,6 +31,7 @@ pacmanfile
 #i3blocks
 #i3status
 #xclip
+#xrandr
 #
 # Wayland
 #
@@ -43,6 +44,10 @@ wl-clipboard
 #
 # Applications
 #
+pipewire
+wireplumber
+pipewire-pulse
+light
 fish
 fzf
 stow
