@@ -1,0 +1,63 @@
+#
+# Base System
+#
+base
+linux
+linux-firmware
+efibootmgr
+grub
+vim
+openssh
+sudo
+networkmanager
+base-devel
+linux-headers
+git
+rust
+#
+# Paru
+#
+paru
+paru-debug
+pacmanfile
+#
+# 
+#
+# X11
+#
+#xorg-server
+#xorg-xinit
+#i3-wm
+#i3blocks
+#i3status
+#xclip
+#
+# Wayland
+#
+xorg-xwayland
+sway
+swaybg
+tofi
+foot
+wl-clipboard
+#
+# Applications
+#
+fish
+fzf
+stow
+sshfs
+sshpass
+feh
+firefox
+inetutils
+unzip
+leafpad
+mpv
+nginx
+qbittorrent
+tailscale
+thunar
+tumbler
+grimshot
+freerdp
