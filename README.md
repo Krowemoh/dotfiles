@@ -3,12 +3,40 @@
 This is my dotfiles.
 
 ```
-git clone git@github.com:Krowemoh/dotfiles.git
+git clone https://github.com/Krowemoh/dotfiles.git 
+```
+
+You need to first install the base system:
+
+```
+base
+linux
+linux-firmware
+efibootmgr
+grub
+vim
+openssh
+sudo
+networkmanager
+base-devel
+linux-headers
+git
+rust
+```
+
+Then install paru and pacmanfile:
+
+```
+paru
+pacmanfile
 ```
 
 For use with stow:
 
 ```
-stow -d ~/dotfiles vim
-stow -d ~/dotfiles fish
+cd ~/dotfiles
+stow fish
+stow sway
+stow foot
+stow vim
 ```
