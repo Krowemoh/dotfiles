@@ -62,3 +62,5 @@ LOGTO
 pacmanfile
 paru
 dotfiles
+networkmanager
+openssh

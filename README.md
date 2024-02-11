@@ -1,12 +1,16 @@
 # dotfiles
 
-This is my dotfiles.
+These are my dotfiles and Arch Linux instructions.
 
 ```
 git clone https://github.com/Krowemoh/dotfiles.git 
 ```
 
-You need to first install the base system:
+## Arch
+
+I use pacmanfile to get a declarative packaging system on Arch. This requires paru and so I need git and rust installed as part of the base system. I also have vim, openssh and networkmanager as I think those are too useful to skip.
+
+Install the base system:
 
 ```
 base
@@ -16,19 +20,32 @@ efibootmgr
 grub
 vim
 openssh
-sudo
 networkmanager
 base-devel
 linux-headers
 git
 rust
+sudo
 ```
 
-Then install paru and pacmanfile:
+Create a user:
 
 ```
-paru
-pacmanfile
+useradd -m -G wheel -s /bin/bash username
+```
+
+Install paru:
+
+```
+git clone https://aur.archlinux.org/paru.git
+cd paru
+makepkg -si
+```
+
+Install pacmanfile:
+
+```
+paru pacmanfile
 ```
 
 For use with stow:
