@@ -21,8 +21,6 @@ paru
 paru-debug
 pacmanfile
 #
-# 
-#
 # X11
 #
 #xorg-server
@@ -47,6 +45,7 @@ wl-clipboard
 pipewire
 wireplumber
 pipewire-pulse
+pavucontrol
 light
 fish
 fzf
