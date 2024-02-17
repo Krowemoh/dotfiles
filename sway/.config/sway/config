@@ -234,6 +234,6 @@ workspace 1; exec firefox
 workspace 2; exec foot
 workspace 2; exec foot
 
-workspace 3; exec https://chat.openai.com/
+workspace 3; exec firefox --new-window https://chat.openai.com/
 workspace 3; exec leafpad ~/paste.txt
 
