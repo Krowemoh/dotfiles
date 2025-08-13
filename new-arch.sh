@@ -55,6 +55,8 @@ arch-chroot /mnt pacman -Syy --noconfirm git rust sudo
 arch-chroot /mnt ln -sf /usr/share/zoneinfo/America/New_York /etc/localtime
 arch-chroot /mnt hwclock --systohc
 
+arch-chroot /mnt sed -i '/^# %wheel ALL=(ALL:ALL) ALL/s/#//' /etc/locale.gen
+
 arch-chroot /mnt sed -i '/^#en_US\.UTF-8 UTF-8/s/#//' /etc/locale.gen
 arch-chroot /mnt locale-gen
 arch-chroot /mnt systemd-firstboot --locale='en_US.UTF-8'
@@ -85,7 +87,7 @@ arch-chroot /mnt pacman -Syy --noconfirm nvidia-open
 arch-chroot /mnt pacman -Syy --noconfirm sway swaybg foot xorg-xwayland
 arch-chroot /mnt pacman -Syy --noconfirm stow
 arch-chroot /mnt pacman -Syy --noconfirm feh sshpass sshfs fish freerdp unzip nginx
-arch-chroot /mnt pacman -Syy --noconfirm qbittorrent thunar grimshot mpv leafpad
+arch-chroot /mnt pacman -Syy --noconfirm qbittorrent thunar mpv leafpad
 arch-chroot /mnt pacman -Syy --noconfirm firefox
 arch-chroot /mnt pacman -Syy --noconfirm pipewire wireplumber pipewire-pulse pavucontrol
 
@@ -95,4 +97,4 @@ arch-chroot /mnt pacman -Syy --noconfirm pipewire wireplumber pipewire-pulse pav
 arch-chroot /mnt bash -c 'cd /root/ && git clone https://aur.archlinux.org/paru.git'
 arch-chroot /mnt bash -c 'cd /root/paru && makepkg -si'
 
-arch-chroot /mnt paru -S --no-confirm tofi
+arch-chroot /mnt paru -S --no-confirm tofi grimshot
