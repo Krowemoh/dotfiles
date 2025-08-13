@@ -82,7 +82,7 @@ arch-chroot /mnt bash -c "echo root:${ROOT_PASSWORD} | chpasswd"
 # Install Packages
 #
 arch-chroot /mnt pacman -Syy --noconfirm nvidia-open
-arch-chroot /mnt pacman -Syy --noconfirm sway swaybg foot xorg-wayland
+arch-chroot /mnt pacman -Syy --noconfirm sway swaybg foot xorg-xwayland
 arch-chroot /mnt pacman -Syy --noconfirm stow
 arch-chroot /mnt pacman -Syy --noconfirm feh sshpass sshfs fish freerdp unzip nginx
 arch-chroot /mnt pacman -Syy --noconfirm qbittorrent thunar grimshot mpv leafpad
