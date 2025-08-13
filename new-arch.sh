@@ -1,10 +1,14 @@
 #!/usr/bin/env bash
 
+set -euo pipefail
+
 USERNAME=""
 PASSWORD=""
 ROOT_PASSWORD=""
+NVIDIA=1
 
-DRIVE=/dev/nvme0n1
+DRIVE=""
+
 P1="${DRIVE}p1"
 P2="${DRIVE}p2"
 P3="${DRIVE}p3"
@@ -69,9 +73,9 @@ arch-chroot /mnt grub-mkconfig -o /boot/grub/grub.cfg
 arch-chroot /mnt useradd -m -G wheel -s /bin/bash ${USERNAME}
 arch-chroot /mnt usermod -aG audio ${USERNAME}
 arch-chroot /mnt usermod -aG video ${USERNAME}
-arch-chroot /mnt echo "${USERNAME}:${PASSWORD}" | chpasswd
 
-arch-chroot /mnt echo "root:${ROOT_PASSWORD}" | chpasswd
+arch-chroot /mnt bash -c "echo ${USERNAME}:${PASSWORD} | chpasswd"
+arch-chroot /mnt bash -c "echo root:${ROOT_PASSWORD} | chpasswd"
 
 #
 # Install Packages
@@ -88,6 +92,6 @@ arch-chroot /mnt pacman -Syy --noconfirm pipewire wireplumber pipewire-pulse pav
 # Install AUR Packages
 #
 arch-chroot /mnt bash -c 'cd /root/ && git clone https://aur.archlinux.org/paru.git'
-arch-chroot /mnt bash -c 'cd /root/pacman && makepkg -si'
+arch-chroot /mnt bash -c 'cd /root/paru && makepkg -si'
 
 arch-chroot /mnt paru -S --no-confirm tofi
