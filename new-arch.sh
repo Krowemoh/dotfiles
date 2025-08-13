@@ -55,8 +55,9 @@ arch-chroot /mnt pacman -Syy --noconfirm git rust sudo
 arch-chroot /mnt ln -sf /usr/share/zoneinfo/America/New_York /etc/localtime
 arch-chroot /mnt hwclock --systohc
 
-arch-chroot /mnt systemd-firstboot --locale='en_US.UTF-8'
+arch-chroot /mnt sed -i '/^#en_US\.UTF-8 UTF-8/s/#//' /etc/locale.gen
 arch-chroot /mnt locale-gen
+arch-chroot /mnt systemd-firstboot --locale='en_US.UTF-8'
 
 arch-chroot /mnt bash -c "echo LANG=en_US.UTF-8 > /etc/locale.conf"
 
