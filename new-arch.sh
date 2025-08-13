@@ -63,7 +63,7 @@ arch-chroot /mnt bash -c "echo LANG=en_US.UTF-8 > /etc/locale.conf"
 
 arch-chroot /mnt bash -c "echo november > /etc/hostname"
 
-arch-chroot /mnt systemctl enable networkmanager
+arch-chroot /mnt systemctl enable NetworkManager
 
 arch-chroot /mnt grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
 arch-chroot /mnt grub-mkconfig -o /boot/grub/grub.cfg
