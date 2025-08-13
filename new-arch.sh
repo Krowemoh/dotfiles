@@ -78,13 +78,11 @@ arch-chroot /mnt "echo 'root:${ROOT_PASSWORD}' | chpasswd"
 #
 arch-chroot /mnt "pacman -Syy nvidia-open"
 arch-chroot /mnt "pacman -Syy sway swaybg foot xorg-wayland"
-arch-chroot /mnt "pacman -Syy greetd stow"
+arch-chroot /mnt "pacman -Syy stow"
 arch-chroot /mnt "pacman -Syy feh sshpass sshfs fish freerdp unzip nginx"
 arch-chroot /mnt "pacman -Syy qbittorrent thunar grimshot mpv leafpad" 
 arch-chroot /mnt "pacman -Syy firefox"
 arch-chroot /mnt "pacman -Syy pipewire wireplumber pipewire-pulse pavucontrol"
-
-arch-chroot /mnt "systemctl enable greetd"
 
 #
 # Install AUR Packages
