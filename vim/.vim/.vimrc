@@ -1,1 +1,0 @@
-echo "runtime vimrc" > ~/.vimrc
