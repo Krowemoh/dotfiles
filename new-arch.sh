@@ -58,9 +58,9 @@ arch-chroot /mnt hwclock --systohc
 arch-chroot /mnt systemd-firstboot --locale='en_US.UTF-8'
 arch-chroot /mnt locale-gen
 
-arch-chroot /mnt echo LANG=en_US.UTF-8 > /etc/locale.conf
+arch-chroot /mnt bash -c "echo LANG=en_US.UTF-8 > /etc/locale.conf"
 
-arch-chroot /mnt echo november > /etc/hostname
+arch-chroot /mnt bash -c "echo november > /etc/hostname"
 
 arch-chroot /mnt systemctl enable networkmanager
 
