@@ -91,10 +91,3 @@ arch-chroot /mnt pacman -Syy --noconfirm qbittorrent thunar mpv leafpad
 arch-chroot /mnt pacman -Syy --noconfirm firefox
 arch-chroot /mnt pacman -Syy --noconfirm pipewire wireplumber pipewire-pulse pavucontrol
 
-#
-# Install AUR Packages
-#
-arch-chroot /mnt bash -c 'cd /root/ && git clone https://aur.archlinux.org/paru.git'
-arch-chroot /mnt bash -c 'cd /root/paru && makepkg -si'
-
-arch-chroot /mnt paru -S --no-confirm tofi grimshot
